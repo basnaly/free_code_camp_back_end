@@ -13,7 +13,7 @@ router.get("/", function (req, res) {
     res.sendFile(__dirname + '/views/index.html');
   });
 
-router.get('/:date', function (req, res) { // date: 2022-06-16
+router.get('/api/:date', function (req, res) { // date: 2022-06-16
     let date = new Date(req.params.date) // try to create date.object 
     if (isNaN(date.getTime())) { // if data is invalid in was timestamp
       date = new Date(+req.params.date) // transform to number and create date.object
