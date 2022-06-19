@@ -1,4 +1,5 @@
 const timestamp = require('./api/Timestamp/timestamp')
+const reqHeader = require('./api/RequestHeader/reqHeader')
 
 // index.js
 // where your node app starts
@@ -25,4 +26,5 @@ var listener = app.listen(54375, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-app.use('/timestamp', timestamp)
+app.use('/timestamp', timestamp);
+app.use('/req-header', reqHeader);
