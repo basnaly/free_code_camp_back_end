@@ -9,7 +9,7 @@ const router = express.Router()
 router.use(bodyParser.urlencoded({ extended: "false" })); //body for post
 router.use(bodyParser.json());
 
-let listURL = ['https://freecodecamp.org/', 'https://forum.freecodecamp.org/', 'https://www.google.com'];
+let listURL = ['https://freeCodeCamp.org', 'https://forum.freecodecamp.org/', 'https://www.google.com'];
 
 router.use('/public', express.static(`${__dirname}/public`));
 
