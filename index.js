@@ -1,5 +1,6 @@
-const timestamp = require('./api/Timestamp/timestamp')
-const reqHeader = require('./api/RequestHeader/reqHeader')
+const timestamp = require('./api/Timestamp/timestamp');
+const reqHeader = require('./api/RequestHeader/reqHeader');
+const urlShortener = require('./api/URLShortener/urlShortener')
 
 // index.js
 // where your node app starts
@@ -28,3 +29,4 @@ var listener = app.listen(54375, function () {
 
 app.use('/timestamp', timestamp);
 app.use('/req-header', reqHeader);
+app.use('/url-shortener', urlShortener);
